@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/OpenFreeEnergy/gufe/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: c1640671f79f0081cae944bcfe702bddfe04fc8a3ed388526986fd4d984c5608
+  sha256: c58747ad0c86c6bb80e61f8dd6a04517c2926ebc43b3607c92ac25d3b29050b4
 
 build:
   noarch: python
