@@ -12,11 +12,11 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.9
     - pip
   run:
     - coverage
@@ -24,8 +24,9 @@ requirements:
     - numpy
     - openff-toolkit
     - openff-units
+    - pint <0.20.0
     - pip
-    - python >=3.6
+    - python >=3.9
     - rdkit
     - typing-extensions
 
