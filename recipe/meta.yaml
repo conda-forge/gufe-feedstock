@@ -16,7 +16,7 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.9
     - pip
   run:
     - coverage
@@ -26,7 +26,7 @@ requirements:
     - openff-units
     - pint <0.20.0
     - pip
-    - python >=3.6
+    - python >=3.9
     - rdkit
     - typing-extensions
 
