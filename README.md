@@ -7,7 +7,7 @@ Package license: MIT
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/gufe-feedstock/blob/main/LICENSE.txt)
 
-Summary: gufe: good unuf for everyone
+Summary: gufe: gallant unicorns frolick eastwards
 
 Development: https://github.com/OpenFreeEnergy/gufe
 
@@ -151,6 +151,7 @@ Feedstock Maintainers
 =====================
 
 * [@IAlibay](https://github.com/IAlibay/)
+* [@dotsdl](https://github.com/dotsdl/)
 * [@dwhswenson](https://github.com/dwhswenson/)
 * [@mikemhenry](https://github.com/mikemhenry/)
 * [@richardjgowers](https://github.com/richardjgowers/)
