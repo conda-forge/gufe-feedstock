@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://github.com/OpenFreeEnergy/gufe/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 6714dfd4916bf9297a442a5e6baf3487060123e3d83fab2ce05543418a1837d4
+  sha256: 52b60ef789dc29461a6a734214ffab4aeedd5182d83dfc0c74e197a86c1bc662
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -23,7 +23,7 @@ requirements:
     - networkx
     - numpy
     - openff-toolkit
-    - openff-units >=0.2.0
+    - openff-units
     - pip
     - python >=3.9
     - rdkit
