@@ -23,7 +23,7 @@ requirements:
     - networkx
     - numpy
     - openff-toolkit
-    - openff-units ==0.1.8
+    - openff-units
     - pip
     - python >=3.9
     - rdkit
