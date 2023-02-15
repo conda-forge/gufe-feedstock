@@ -1,5 +1,5 @@
 {% set name = "gufe" %}
-{% set version = "0.5" %}
+{% set version = "0.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://github.com/OpenFreeEnergy/gufe/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 52b60ef789dc29461a6a734214ffab4aeedd5182d83dfc0c74e197a86c1bc662
+  sha256: 0f6622b351d322d3a3950a6bf14969c801cb5908442d1e3372a74d28cd552f07
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 3
+  number: 0
 
 requirements:
   host:
@@ -21,10 +21,10 @@ requirements:
   run:
     - coverage
     - networkx
-    - numpy
+    - numpy <1.24.0
     - openff-toolkit
     - openff-units >=0.2.0
-    - openff-models
+    - openff-models >=0.0.4
     - pip
     - python >=3.9
     - rdkit
