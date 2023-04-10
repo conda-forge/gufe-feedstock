@@ -12,12 +12,13 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - python >=3.9
     - pip
+    - versioningit
   run:
     - coverage
     - networkx
@@ -37,6 +38,7 @@ test:
     - pip
   commands:
     - pip check
+    - python -Ic "import gufe; print(gufe.__version__); assert gufe.__version__ == '{{ version }}'"
 
 about:
   home: https://github.com/OpenFreeEnergy/gufe
