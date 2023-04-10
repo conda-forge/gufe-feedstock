@@ -38,7 +38,7 @@ test:
     - pip
   commands:
     - pip check
-    - python -Ic "import gufe; print(gufe.__version__); assert gufe.__version__ == '{{ version }}'"
+    - python -Ic "import gufe; print(gufe.__version__); assert gufe.__version__ == {{ version }}"
 
 about:
   home: https://github.com/OpenFreeEnergy/gufe
