@@ -18,7 +18,6 @@ requirements:
   host:
     - python >=3.9
     - pip
-    - versioningit
   run:
     - coverage
     - networkx
