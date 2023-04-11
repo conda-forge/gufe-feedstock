@@ -1,19 +1,19 @@
-About gufe
-==========
+About gufe-feedstock
+====================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/gufe-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/OpenFreeEnergy/gufe
 
 Package license: MIT
 
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/gufe-feedstock/blob/main/LICENSE.txt)
-
-Summary: gufe: gallant unicorns frolick eastwards
+Summary: gufe: Grand Unified Free Energy
 
 Development: https://github.com/OpenFreeEnergy/gufe
 
 Documentation: https://github.com/OpenFreeEnergy/gufe
 
-Base toolkit for OpenFE and other free energy tooling
+Abstract base classes for free energy calculations by Open Free Energy
 
 
 Current build status
