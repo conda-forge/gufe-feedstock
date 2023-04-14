@@ -12,7 +12,7 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -35,8 +35,10 @@ test:
     - gufe
   requires:
     - pip
+    - pytest
   commands:
     - pip check
+    - pytest -v --pyargs gufe
 
 about:
   home: https://github.com/OpenFreeEnergy/gufe
