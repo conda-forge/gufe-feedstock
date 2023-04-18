@@ -1,5 +1,5 @@
 {% set name = "gufe" %}
-{% set version = "0.7.1" %}
+{% set version = "0.7.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://github.com/OpenFreeEnergy/gufe/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 30374fb43ee907dfbd398f2a3c29c932c656f809db2b45e2f34a235ffe8b7642
+  sha256: 61ab69e6427192baab3730e3174cc3151982effb9ac6d296f2ac771268db1593
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
