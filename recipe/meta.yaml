@@ -1,13 +1,13 @@
 {% set name = "gufe" %}
-{% set version = "0.7.2" %}
+{% set version = "0.7.3" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/OpenFreeEnergy/gufe/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 61ab69e6427192baab3730e3174cc3151982effb9ac6d296f2ac771268db1593
+  git_url: https://github.com/OpenFreeEnergy/{{ name }}.git
+  git_rev: 6fc5d85
 
 build:
   noarch: python
@@ -18,11 +18,12 @@ requirements:
   host:
     - python >=3.9
     - pip
+    - versioningit
   run:
     - coverage
     - networkx
     - numpy <1.24.0
-    - openff-toolkit
+    - openff-toolkit >=0.13.0
     - openff-units >=0.2.0
     - openff-models >=0.0.4
     - pip
@@ -38,6 +39,7 @@ test:
     - pytest
   commands:
     - pip check
+    - python -Ic "import gufe; print(gufe.__version__)"
     - pytest -v --pyargs gufe
 
 about:
