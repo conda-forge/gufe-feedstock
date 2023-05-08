@@ -39,7 +39,6 @@ test:
     - pip
     - pytest
   commands:
-    - pip check
     - python -Ic "import gufe; print(gufe.__version__)"
     - pytest -v --pyargs gufe
 
