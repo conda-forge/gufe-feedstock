@@ -1,5 +1,5 @@
 {% set name = "gufe" %}
-{% set version = "0.7.3" %}
+{% set version = "0.8.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,13 @@ package:
 
 source:
   git_url: https://github.com/OpenFreeEnergy/{{ name }}.git
-  git_rev: 6fc5d85
+  git_rev: fd7231d
+  git_depth: 1
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
@@ -23,9 +24,9 @@ requirements:
     - coverage
     - networkx
     - numpy <1.24.0
-    - openff-toolkit >=0.13.0
+    - openff-toolkit ==0.13
     - openff-units >=0.2.0
-    - openff-models ==0.0.4
+    - openff-models ==0.0.5
     - pip
     - python >=3.9
     - rdkit
@@ -38,7 +39,6 @@ test:
     - pip
     - pytest
   commands:
-    - pip check
     - python -Ic "import gufe; print(gufe.__version__)"
     - pytest -v --pyargs gufe
 
