@@ -1,5 +1,5 @@
 {% set name = "gufe" %}
-{% set version = "0.9.3" %}
+{% set version = "0.9.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,13 +7,13 @@ package:
 
 source:
   git_url: https://github.com/OpenFreeEnergy/{{ name }}.git
-  git_rev: v{{ version }}
+  git_rev: ad1de2bd87ec8ff28d0d0d82be9888383c602dcd
   git_depth: -1
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
