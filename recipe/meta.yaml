@@ -13,7 +13,7 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -23,12 +23,12 @@ requirements:
   run:
     - coverage
     - networkx
-    - numpy <1.24.0
-    - openff-toolkit >=0.13,<0.14
-    - openff-units ==0.2.0
-    - pint <0.22
-    - openff-models ==0.0.5
-    - pydantic <2.0
+    - numpy
+    - openff-toolkit >=0.14,<0.15
+    - openff-units
+    - pint
+    - openff-models 
+    - pydantic
     - pip
     - python >=3.9
     - rdkit
