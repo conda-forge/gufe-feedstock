@@ -1,5 +1,5 @@
 {% set name = "gufe" %}
-{% set version = "0.9.3" %}
+{% set version = "0.9.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   git_url: https://github.com/OpenFreeEnergy/{{ name }}.git
-  git_rev: v{{ version }}
+  git_rev: 2028a636f2e0715f339c2e80b74f69c0e9d118b9
   git_depth: -1
 
 build:
@@ -23,12 +23,12 @@ requirements:
   run:
     - coverage
     - networkx
-    - numpy <1.24.0
-    - openff-toolkit >=0.13,<0.14
-    - openff-units ==0.2.0
-    - pint <0.22
-    - openff-models ==0.0.5
-    - pydantic <2.0
+    - numpy
+    - openff-toolkit >=0.14,<0.15
+    - openff-units
+    - pint
+    - openff-models 
+    - pydantic
     - pip
     - python >=3.9
     - rdkit
