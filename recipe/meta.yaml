@@ -7,7 +7,7 @@ package:
 
 source:
   git_url: https://github.com/OpenFreeEnergy/{{ name }}.git
-  git_rev: ad1de2bd87ec8ff28d0d0d82be9888383c602dcd
+  git_rev: 2028a636f2e0715f339c2e80b74f69c0e9d118b9
   git_depth: -1
 
 build:
