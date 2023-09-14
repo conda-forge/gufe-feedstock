@@ -1,5 +1,5 @@
 {% set name = "gufe" %}
-{% set version = "0.9.3" %}
+{% set version = "0.9.4" %}
 
 package:
   name: {{ name|lower }}
@@ -28,7 +28,7 @@ requirements:
     - openff-units ==0.2.0
     - pint <0.22
     - openff-models ==0.0.5
-    - pydantic <2.0
+    - pydantic
     - pip
     - python >=3.9
     - rdkit
