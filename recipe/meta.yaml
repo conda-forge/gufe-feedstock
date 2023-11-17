@@ -13,7 +13,7 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -27,7 +27,7 @@ requirements:
     - openff-toolkit >=0.13,<0.14
     - openff-units ==0.2.0
     - pint <0.22
-    - openff-models ==0.0.5
+    - openff-models
     - pydantic
     - pip
     - python >=3.9
