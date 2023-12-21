@@ -13,23 +13,23 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 2
 
 requirements:
   host:
-    - python >=3.9
     - pip
+    - python >=3.9
     - versioningit
   run:
     - coverage
     - networkx
-    - numpy <1.24.0
+    - numpy 
+    - openff-models
     - openff-toolkit >=0.13,<0.14
     - openff-units ==0.2.0
     - pint <0.22
-    - openff-models
-    - pydantic
     - pip
+    - pydantic
     - python >=3.9
     - rdkit
     - typing-extensions
@@ -57,8 +57,8 @@ about:
 
 extra:
   recipe-maintainers:
+    - IAlibay
+    - dotsdl
+    - dwhswenson
     - mikemhenry
     - richardjgowers
-    - IAlibay
-    - dwhswenson
-    - dotsdl
