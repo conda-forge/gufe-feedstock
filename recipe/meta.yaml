@@ -25,9 +25,8 @@ requirements:
     - networkx
     - numpy 
     - openff-models
-    - openff-toolkit >=0.13,<0.16
-    - openff-units ==0.2.0
-    - pint <0.22
+    - openff-toolkit >=0.13
+    - openff-units
     - pip
     - pydantic
     - python >=3.9
