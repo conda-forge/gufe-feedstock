@@ -1,13 +1,14 @@
 {% set name = "gufe" %}
-{% set version = "0.6.1" %}
+{% set version = "1.0.0rc0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/OpenFreeEnergy/gufe/archive/refs/tags/v{{ version }}.tar.gz
-  sha256: 4b62d5b5217ac7c6d54276f95551618170ceff2bdbfc21da5bf169ae1104d991
+  git_url: https://github.com/OpenFreeEnergy/{{ name }}.git
+  git_rev: v{{ version }}
+  git_depth: -1
 
 build:
   noarch: python
@@ -16,16 +17,16 @@ build:
 
 requirements:
   host:
+    - pip
     - python >=3.9
-    - pip
+    - versioningit
   run:
-    - coverage
     - networkx
-    - numpy <1.24.0
-    - openff-toolkit
-    - openff-units >=0.2.0
-    - openff-models >=0.0.4
-    - pip
+    - numpy 
+    - openff-models
+    - openff-toolkit >=0.13
+    - openff-units
+    - pydantic
     - python >=3.9
     - rdkit
     - typing-extensions
@@ -35,8 +36,10 @@ test:
     - gufe
   requires:
     - pip
+    - pytest
   commands:
-    - pip check
+    - python -Ic "import gufe; print(gufe.__version__)"
+    - pytest -v --pyargs gufe
 
 about:
   home: https://github.com/OpenFreeEnergy/gufe
@@ -51,8 +54,8 @@ about:
 
 extra:
   recipe-maintainers:
+    - IAlibay
+    - dotsdl
+    - dwhswenson
     - mikemhenry
     - richardjgowers
-    - IAlibay
-    - dwhswenson
-    - dotsdl
