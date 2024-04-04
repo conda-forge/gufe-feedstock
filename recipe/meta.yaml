@@ -23,7 +23,7 @@ requirements:
   run:
     - networkx
     - numpy 
-    - openff-models ~=0.2.1
+    - openff-models ~=0.1.2
     - openff-toolkit >=0.13
     - openff-units
     - pydantic
