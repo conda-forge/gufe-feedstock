@@ -1,5 +1,5 @@
 {% set name = "gufe" %}
-{% set version = "0.10.0" %}
+{% set version = "1.0.0" %}
 
 package:
   name: {{ name|lower }}
@@ -26,7 +26,7 @@ requirements:
     - numpy 
     - openff-models
     - openff-toolkit >=0.13,<0.16
-    - openff-units ==0.2.0
+    - openff-units >=0.2,<0.3
     - pint <0.22
     - pip
     - pydantic
