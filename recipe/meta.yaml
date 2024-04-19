@@ -27,7 +27,7 @@ requirements:
     - openff-models
     - openff-toolkit >=0.13,<0.16
     - openff-units >=0.2,<0.3
-    - pint <0.22
+    - pint
     - pip
     - pydantic
     - python >=3.9
