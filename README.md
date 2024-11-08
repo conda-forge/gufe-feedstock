@@ -11,7 +11,7 @@ Summary: gufe: Grand Unified Free Energy
 
 Development: https://github.com/OpenFreeEnergy/gufe
 
-Documentation: https://github.com/OpenFreeEnergy/gufe
+Documentation: https://gufe.readthedocs.io/
 
 Abstract base classes for free energy calculations by Open Free Energy
 
