@@ -52,7 +52,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  doc_url: https://github.com/OpenFreeEnergy/gufe
+  doc_url: https://gufe.readthedocs.io/
   dev_url: https://github.com/OpenFreeEnergy/gufe
 
 extra:
