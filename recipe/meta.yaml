@@ -1,5 +1,5 @@
 {% set name = "gufe" %}
-{% set version = "1.0.0" %}
+{% set version = "1.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -18,19 +18,19 @@ build:
 requirements:
   host:
     - pip
-    - python >=3.9
+    - python >=3.10
+    - setuptools
     - versioningit
   run:
-    - coverage
     - networkx
     - numpy 
     - openff-models ~=0.1.2
     - openff-toolkit >=0.13
-    - openff-units >=0.2,<0.3
+    - openff-units !=0.2.3,>=0.2,<0.3
     - pint
     - pip
-    - pydantic
-    - python >=3.9
+    - pydantic >=1.10.17
+    - python >=3.10
     - rdkit
     - typing-extensions
 
@@ -52,7 +52,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  doc_url: https://github.com/OpenFreeEnergy/gufe
+  doc_url: https://gufe.readthedocs.io/
   dev_url: https://github.com/OpenFreeEnergy/gufe
 
 extra:
@@ -61,4 +61,4 @@ extra:
     - dotsdl
     - dwhswenson
     - mikemhenry
-    - richardjgowers
+    - atravitz
