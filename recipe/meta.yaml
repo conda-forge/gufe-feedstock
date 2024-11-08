@@ -22,7 +22,6 @@ requirements:
     - setuptools
     - versioningit
   run:
-    - coverage
     - networkx
     - numpy 
     - openff-models ~=0.1.2
@@ -30,7 +29,7 @@ requirements:
     - openff-units !=0.2.3,>=0.2,<0.3
     - pint
     - pip
-    - pydantic
+    - pydantic >=1.10.17
     - python >=3.10
     - rdkit
     - typing-extensions
