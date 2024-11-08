@@ -151,8 +151,8 @@ Feedstock Maintainers
 =====================
 
 * [@IAlibay](https://github.com/IAlibay/)
+* [@atravitz](https://github.com/atravitz/)
 * [@dotsdl](https://github.com/dotsdl/)
 * [@dwhswenson](https://github.com/dwhswenson/)
 * [@mikemhenry](https://github.com/mikemhenry/)
-* [@richardjgowers](https://github.com/richardjgowers/)
 
