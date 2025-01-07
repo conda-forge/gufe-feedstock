@@ -1,3 +1,4 @@
+{% set python_min = '3.10' %}
 {% set name = "gufe" %}
 {% set version = "1.1.0" %}
 
@@ -13,12 +14,12 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 2
 
 requirements:
   host:
     - pip
-    - python >=3.10
+    - python {{ python_min }}
     - setuptools
     - versioningit
   run:
@@ -31,7 +32,7 @@ requirements:
     - pint
     - pip
     - pydantic >=1.10.17
-    - python >=3.10
+    - python >={{ python_min }}
     - rdkit
     - typing-extensions
 
@@ -41,6 +42,7 @@ test:
   requires:
     - pip
     - pytest
+    - python {{ python_min }}
   commands:
     - python -Ic "import gufe; print(gufe.__version__)"
     - pytest -v --pyargs gufe
