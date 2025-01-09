@@ -1,6 +1,6 @@
 {% set python_min = '3.10' %}
 {% set name = "gufe" %}
-{% set version = "1.1.0" %}
+{% set version = "1.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -14,7 +14,7 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 2
+  number: 0
 
 requirements:
   host:
@@ -26,7 +26,7 @@ requirements:
     - networkx
     - numpy 
     - openff-models ~=0.1.2
-    - openff-toolkit >=0.13
+    - openff-toolkit-base >=0.13
     - openff-units !=0.2.3,>=0.2,<0.3
     - openmm <8.2.0
     - pint
