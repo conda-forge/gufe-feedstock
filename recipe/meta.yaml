@@ -23,6 +23,7 @@ requirements:
     - setuptools
     - versioningit
   run:
+    - ambertools >=22
     - networkx
     - numpy 
     - openff-models ~=0.1.2
