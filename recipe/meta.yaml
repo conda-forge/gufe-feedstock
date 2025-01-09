@@ -35,6 +35,7 @@ requirements:
     - python >={{ python_min }}
     - rdkit
     - typing-extensions
+    - zstandard
 
 test:
   imports:
