@@ -14,7 +14,7 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -34,7 +34,7 @@ requirements:
     - pip
     - pydantic >=1.10.17
     - python >={{ python_min }}
-    - rdkit
+    - rdkit !=2024.03.06
     - typing-extensions
     - zstandard
 
