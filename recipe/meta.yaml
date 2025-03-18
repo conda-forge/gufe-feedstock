@@ -37,6 +37,8 @@ requirements:
     - rdkit !=2024.03.06
     - typing-extensions
     - zstandard
+  run_constrained:
+    - openfe >1.3.0
 
 test:
   imports:
