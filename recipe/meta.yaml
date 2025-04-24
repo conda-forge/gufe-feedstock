@@ -24,6 +24,7 @@ requirements:
     - versioningit
   run:
     - ambertools >=22
+    - msgpack-python
     - networkx
     - numpy 
     - openff-toolkit-base >=0.13
