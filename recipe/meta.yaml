@@ -1,6 +1,6 @@
 {% set python_min = '3.10' %}
 {% set name = "gufe" %}
-{% set version = "1.3.0" %}
+{% set version = "1.4.0" %}
 
 package:
   name: {{ name|lower }}
@@ -26,9 +26,8 @@ requirements:
     - ambertools >=22
     - networkx
     - numpy 
-    - openff-models ~=0.1.2
     - openff-toolkit-base >=0.13
-    - openff-units !=0.2.3,>=0.2,<0.3
+    - openff-units >=0.3
     - openmm <8.2.0
     - pint
     - pip
