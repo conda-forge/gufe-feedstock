@@ -39,14 +39,14 @@ Current release info
 Installing gufe
 ===============
 
-Installing `gufe` from the `conda-forge` channel can be achieved by adding `conda-forge` to your channels with:
+Installing `gufe` from the `conda-forge/label/gufe_rc` channel can be achieved by adding `conda-forge/label/gufe_rc` to your channels with:
 
 ```
-conda config --add channels conda-forge
+conda config --add channels conda-forge/label/gufe_rc
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `gufe` can be installed with `conda`:
+Once the `conda-forge/label/gufe_rc` channel has been enabled, `gufe` can be installed with `conda`:
 
 ```
 conda install gufe
@@ -61,26 +61,26 @@ mamba install gufe
 It is possible to list all of the versions of `gufe` available on your platform with `conda`:
 
 ```
-conda search gufe --channel conda-forge
+conda search gufe --channel conda-forge/label/gufe_rc
 ```
 
 or with `mamba`:
 
 ```
-mamba search gufe --channel conda-forge
+mamba search gufe --channel conda-forge/label/gufe_rc
 ```
 
 Alternatively, `mamba repoquery` may provide more information:
 
 ```
 # Search all versions available on your platform:
-mamba repoquery search gufe --channel conda-forge
+mamba repoquery search gufe --channel conda-forge/label/gufe_rc
 
 # List packages depending on `gufe`:
-mamba repoquery whoneeds gufe --channel conda-forge
+mamba repoquery whoneeds gufe --channel conda-forge/label/gufe_rc
 
 # List dependencies of `gufe`:
-mamba repoquery depends gufe --channel conda-forge
+mamba repoquery depends gufe --channel conda-forge/label/gufe_rc
 ```
 
 
