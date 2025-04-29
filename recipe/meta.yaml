@@ -1,6 +1,6 @@
 {% set python_min = '3.10' %}
 {% set name = "gufe" %}
-{% set version = "1.4.0" %}
+{% set version = "1.5.0rc0" %}
 
 package:
   name: {{ name|lower }}
@@ -8,7 +8,7 @@ package:
 
 source:
   git_url: https://github.com/OpenFreeEnergy/{{ name }}.git
-  git_rev: v{{ version }}
+  git_rev: 795919b9fe4db952c111758495ffb95f6c4b9c67
   git_depth: -1
 
 build:
@@ -29,7 +29,7 @@ requirements:
     - numpy 
     - openff-toolkit-base >=0.13
     - openff-units >=0.3
-    - openmm <8.2.0
+    - openmm
     - pint
     - pip
     - pydantic >=1.10.17
