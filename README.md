@@ -11,7 +11,7 @@ Summary: gufe: Grand Unified Free Energy
 
 Development: https://github.com/OpenFreeEnergy/gufe
 
-Documentation: https://github.com/OpenFreeEnergy/gufe
+Documentation: https://gufe.readthedocs.io/
 
 Abstract base classes for free energy calculations by Open Free Energy
 
@@ -151,8 +151,8 @@ Feedstock Maintainers
 =====================
 
 * [@IAlibay](https://github.com/IAlibay/)
+* [@atravitz](https://github.com/atravitz/)
 * [@dotsdl](https://github.com/dotsdl/)
 * [@dwhswenson](https://github.com/dwhswenson/)
 * [@mikemhenry](https://github.com/mikemhenry/)
-* [@richardjgowers](https://github.com/richardjgowers/)
 
