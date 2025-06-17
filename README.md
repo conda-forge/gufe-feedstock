@@ -7,7 +7,7 @@ Home: https://github.com/OpenFreeEnergy/gufe
 
 Package license: MIT
 
-Summary: gufe: Grand Unified Free Energy
+Summary: gufe
 
 Development: https://github.com/OpenFreeEnergy/gufe
 
