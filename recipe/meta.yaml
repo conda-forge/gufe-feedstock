@@ -45,6 +45,7 @@ test:
     - gufe
   requires:
     - pip
+    - pooch
     - pytest
     - python {{ python_min }}
   commands:
