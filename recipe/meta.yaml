@@ -14,12 +14,12 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
-    - python {{ python_min }}
+    - python {{ python_min }}, < 3.13
     - setuptools
     - versioningit
   run:
@@ -47,7 +47,7 @@ test:
     - pip
     - pooch
     - pytest
-    - python {{ python_min }}
+    - python {{ python_min }}, < 3.13
   commands:
     - python -Ic "import gufe; print(gufe.__version__)"
     - pytest -v --pyargs gufe
