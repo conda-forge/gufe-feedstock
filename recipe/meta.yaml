@@ -29,7 +29,7 @@ requirements:
     - numpy 
     - openff-toolkit-base >=0.13
     - openff-units >=0.3
-    - openmm
+    - openmm <8.3.1  # unpin once 8.3.1 is checked
     - pint
     - pip
     - pydantic >=1.10.17
