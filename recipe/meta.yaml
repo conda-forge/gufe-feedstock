@@ -19,7 +19,7 @@ build:
 requirements:
   host:
     - pip
-    - python {{ python_min }}, < 3.14
+    - python {{ python_min }}, <3.14
     - setuptools
     - versioningit
   run:
