@@ -45,7 +45,7 @@ test:
     - pip
     - pooch
     - pytest
-    - python {{ python_min }} 
+    - python {{ python_min }}, <3.14 
   commands:
     - python -Ic "import gufe; print(gufe.__version__)"
     - pytest -v --pyargs gufe
