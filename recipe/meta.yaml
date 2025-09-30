@@ -1,6 +1,6 @@
 {% set python_min = '3.10' %}
 {% set name = "gufe" %}
-{% set version = "1.6.0" %}
+{% set version = "1.6.1" %}
 
 package:
   name: {{ name|lower }}
@@ -23,12 +23,11 @@ requirements:
     - setuptools
     - versioningit
   run:
-    - ambertools >=22
     - msgpack-python
     - networkx
     - numpy 
-    - openff-toolkit-base >=0.13
-    - openff-units >=0.3
+    - openff-toolkit-base >=0.15.1
+    - openff-units >=0.3.1
     - openmm <8.3.1  # unpin once 8.3.1 is checked
     - pint
     - pip
