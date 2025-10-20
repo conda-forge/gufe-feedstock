@@ -1,6 +1,6 @@
 {% set python_min = '3.10' %}
 {% set name = "gufe" %}
-{% set version = "1.6.1" %}
+{% set version = "1.7.0" %}
 
 package:
   name: {{ name|lower }}
@@ -31,7 +31,7 @@ requirements:
     - openmm <8.3.1  # unpin once 8.3.1 is checked
     - pint
     - pip
-    - pydantic >=1.10.17
+    - pydantic >=2.0, <2.12
     - python >={{ python_min }}
     - rdkit !=2024.03.06
     - typing-extensions
