@@ -14,7 +14,7 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -33,7 +33,7 @@ requirements:
     - pip
     - pydantic >=2.0,<2.12
     - python >={{ python_min }}
-    - rdkit !=2024.03.06
+    - rdkit >=2024.09.1  # github.com/OpenFreeEnergy/gufe/issues/664
     - typing-extensions
     - zstandard
 
