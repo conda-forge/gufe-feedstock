@@ -12,14 +12,14 @@ source:
 
 build:
   noarch: python
-  script: SETUPTOOLS_SCM_PRETEND_VERSION={{ version }} {{ PYTHON }} -m pip install . -vv
+  script: SETUPTOOLS_SCM_PRETEND_VERSION=${{ version }} ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation 
   number: 1
 
 requirements:
   host:
     - pip
     - python {{ python_min }},<3.14
-    - setuptools
+    - setuptools >=61.0
     - setuptools_scm
   run:
     - msgpack-python
