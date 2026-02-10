@@ -11,10 +11,9 @@ Summary: gufe
 
 Development: https://github.com/OpenFreeEnergy/gufe
 
-Documentation: https://gufe.openfree.energy
+Documentation: https://gufe.openfree.energy/
 
 Abstract base classes for free energy calculations by Open Free Energy
-
 
 Current build status
 ====================
