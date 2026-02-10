@@ -20,7 +20,7 @@ requirements:
     - pip
     - python {{ python_min }},<3.14
     - setuptools
-    - versioningit
+    - setuptools_scm
   run:
     - msgpack-python
     - networkx
