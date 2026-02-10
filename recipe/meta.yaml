@@ -12,15 +12,15 @@ source:
 
 build:
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  script: SETUPTOOLS_SCM_PRETEND_VERSION={{ version }} {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation 
+  number: 1
 
 requirements:
   host:
     - pip
     - python {{ python_min }},<3.14
-    - setuptools
-    - versioningit
+    - setuptools >=61.0
+    - setuptools_scm
   run:
     - msgpack-python
     - networkx
@@ -46,7 +46,8 @@ test:
     - pytest
     - python {{ python_min }},<3.14 
   commands:
-    - python -Ic "import gufe; print(gufe.__version__)"
+    - python -c "import {{ name }}; print({{ name }}.__version__)"
+    - python -c "import {{ name }}; assert({{ name }}.__version__ == '{{ version }}')"
     - pytest -v --pyargs gufe
 
 about:
