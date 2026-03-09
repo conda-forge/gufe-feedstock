@@ -3,7 +3,7 @@ schema_version: 1
 context:
   python_min: 3.11
   name: gufe
-  version: 1.9.0-alpha
+  version: 1.9.0.alpha
 
 package:
   name: ${{ name|lower }}
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://github.com/OpenFreeEnergy/${{ name }}/archive/refs/tags/v${{ version }}.tar.gz
-  sha256: 509e3c201d747239b647bf991b6659aea44997bb5b9d905cb12a3194e9bf9eb3
+  sha256: b2dbba80b3d47b7dea64980469be6b6d6339287adb7532b3e54fee98918cdfc2
 
 build:
   number: 0
