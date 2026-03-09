@@ -10,7 +10,7 @@ package:
   version: ${{ version }}
 
 source:
-  url: https://github.com/OpenFreeEnergy/${{ name }}/archive/refs/tags/v${{ version }}.tar.gz
+  url: https://github.com/OpenFreeEnergy/${{ name }}/archive/refs/tags/v1.9.0.alpha.tar.gz
   sha256: b2dbba80b3d47b7dea64980469be6b6d6339287adb7532b3e54fee98918cdfc2
 
 build:
