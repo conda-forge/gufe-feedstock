@@ -12,6 +12,8 @@ package:
 source:
   url: https://github.com/OpenFreeEnergy/${{ name }}/archive/refs/tags/v1.9.0.alpha.tar.gz
   sha256: b2dbba80b3d47b7dea64980469be6b6d6339287adb7532b3e54fee98918cdfc2
+  patches:
+    - MANIFEST.in.patch  # fixes issue where .gz data files are not ending up in package
 
 build:
   number: 0
