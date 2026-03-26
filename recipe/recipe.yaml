@@ -30,7 +30,7 @@ requirements:
     - numpy
     - openff-toolkit-base >=0.15.1
     - openff-units >=0.3.1
-    - openmm <8.5  # unpin once 8.5 is checked
+    - openmm
     - pint
     - pip
     - pooch >=1.9.0  # min needed for https://github.com/fatiando/pooch/issues/502
