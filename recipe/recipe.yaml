@@ -1,9 +1,9 @@
 schema_version: 1
 
 context:
-  python_min: 3.11
+  python_min: "3.11"
   name: gufe
-  version: 1.8.0
+  version: 1.9.0
 
 package:
   name: ${{ name|lower }}
@@ -11,10 +11,10 @@ package:
 
 source:
   url: https://github.com/OpenFreeEnergy/${{ name }}/archive/refs/tags/v${{ version }}.tar.gz
-  sha256: 743481888ed14c5d51e9afd34d9c12d5ff2ee4f71d2ed85616112c3ec4ec1cfa
+  sha256: 55a21db881142e1fc935f7ae5b844442a6f81c02745bc8740a0f71591f60a7e5
 
 build:
-  number: 2
+  number: 0
   noarch: python
   script: SETUPTOOLS_SCM_PRETEND_VERSION=${{ version }} ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
@@ -30,7 +30,7 @@ requirements:
     - numpy
     - openff-toolkit-base >=0.15.1
     - openff-units >=0.3.1
-    - openmm <8.5  # unpin once 8.5 is checked
+    - openmm
     - pint
     - pip
     - pooch >=1.9.0  # min needed for https://github.com/fatiando/pooch/issues/502
