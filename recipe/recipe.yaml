@@ -12,9 +12,11 @@ package:
 source:
   url: https://github.com/OpenFreeEnergy/${{ name }}/archive/refs/tags/v${{ version }}.tar.gz
   sha256: 2cd0aaa1d53027d199e10090c2c77af5f3cc1ab25b4069f94274670065cb568b
+  patches:
+    - py314-fixes.patch  # Fixes python 3.14 support 
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: SETUPTOOLS_SCM_PRETEND_VERSION=${{ version }} ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
@@ -50,8 +52,8 @@ tests:
       run:
         - pip
         - pooch
-        - pytest
-        - python ${{ python_min }}.*
+        - pytest <9.1.0  # This pin can be dropped in the next gufe release
+        - python 3.14.*  # This should be: "${{ python_min }}.*" but for just this build I want to make sure python 3.14 works
     script:
       - python -c "import ${{ name }}; print(${{ name }}.__version__)"
       - python -c "import ${{ name }}; assert(${{ name }}.__version__ == '${{ version }}')"

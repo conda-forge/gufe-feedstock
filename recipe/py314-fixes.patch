@@ -1,0 +1,132 @@
+diff --git a/gufe/serialization/json.py b/gufe/serialization/json.py
+index 7defbcc..1d91939 100644
+--- a/gufe/serialization/json.py
++++ b/gufe/serialization/json.py
+@@ -257,9 +257,9 @@ def is_openff_quantity_dict(dct):
+     return is_custom and dct["pint_unit_registry"] == "openff_units"
+ 
+ 
+-def is_legacy_path_dict(dct: dict) -> bool:
+-    """This supports the case where python 3.12 needs to load python 3.13
+-    TODO: remove when 3.12 support is dropped
++def is_python_313_path_dict(dct: dict) -> bool:
++    """This supports the python 3.13 convention
++    TODO: remove when 3.13 support is dropped
+     """
+     expected = ["__class__", "__module__", ":is_custom:", "path"]
+     is_custom = all(exp in dct for exp in expected)
+@@ -272,9 +272,12 @@ def is_legacy_path_dict(dct: dict) -> bool:
+ 
+ PATH_CODEC = JSONCodec(
+     cls=pathlib.PosixPath,
+-    to_dict=lambda p: {"path": str(p)},
++    to_dict=lambda p: {
++        "__module__": "pathlib",
++        "path": str(p),
++    },
+     from_dict=lambda dct: pathlib.PosixPath(dct["path"]),
+-    is_my_dict=is_legacy_path_dict,
++    is_my_dict=is_python_313_path_dict,
+ )
+ 
+ 
+diff --git a/gufe/settings/models.py b/gufe/settings/models.py
+index c3c7b26..7627bc1 100644
+--- a/gufe/settings/models.py
++++ b/gufe/settings/models.py
+@@ -4,6 +4,8 @@
+ Pydantic models used for storing settings.
+ """
+ 
++from __future__ import annotations
++
+ import abc
+ import pprint
+ from typing import Annotated, Any, Literal
+diff --git a/gufe/tests/test_models.py b/gufe/tests/test_models.py
+index 417f71d..ee613e0 100644
+--- a/gufe/tests/test_models.py
++++ b/gufe/tests/test_models.py
+@@ -4,6 +4,8 @@ Different than testing settings, so tests like model schema generation, model
+ json round trip, and physical unit testing belongs here.
+ """
+ 
++from __future__ import annotations
++
+ import json
+ 
+ import numpy as np
+diff --git a/gufe/tests/test_protocol.py b/gufe/tests/test_protocol.py
+index f58e4b5..10de748 100644
+--- a/gufe/tests/test_protocol.py
++++ b/gufe/tests/test_protocol.py
+@@ -1,5 +1,7 @@
+ # This code is part of gufe and is licensed under the MIT license.
+ # For details, see https://github.com/OpenFreeEnergy/gufe
++from __future__ import annotations
++
+ import datetime
+ import itertools
+ import pathlib
+diff --git a/gufe/tests/test_protocoldag.py b/gufe/tests/test_protocoldag.py
+index 8391bf0..e7607b8 100644
+--- a/gufe/tests/test_protocoldag.py
++++ b/gufe/tests/test_protocoldag.py
+@@ -1,5 +1,7 @@
+ # This code is part of gufe and is licensed under the MIT license.
+ # For details, see https://github.com/OpenFreeEnergy/gufe
++from __future__ import annotations
++
+ import os
+ import pathlib
+ 
+diff --git a/gufe/tests/test_serialization_json.py b/gufe/tests/test_serialization_json.py
+index 091ab44..557ad21 100644
+--- a/gufe/tests/test_serialization_json.py
++++ b/gufe/tests/test_serialization_json.py
+@@ -6,7 +6,6 @@
+ import abc
+ import json
+ import pathlib
+-import sys
+ from uuid import uuid4
+ 
+ import numpy as np
+@@ -235,6 +234,7 @@ class TestPathCodec(CustomJSONCodingTest):
+         self.objs = [
+             pathlib.PosixPath("foo/bar"),
+         ]
++        # Check to see if we get the canonical serialized form of the pathlib module
+         self.dcts = [
+             {
+                 ":is_custom:": True,
+@@ -243,8 +243,6 @@ class TestPathCodec(CustomJSONCodingTest):
+                 "path": "foo/bar",
+             }
+         ]
+-        if sys.version_info[:2] >= (3, 13):
+-            self.dcts[0]["__module__"] = "pathlib._local"
+ 
+ 
+ class TestSettingsCodec(CustomJSONCodingTest):
+diff --git a/pyproject.toml b/pyproject.toml
+index b64f4ce..3c05ae7 100644
+--- a/pyproject.toml
++++ b/pyproject.toml
+@@ -12,7 +12,7 @@ readme = "README.md"
+ license = "MIT"
+ license-files = [ "LICENSE" ]
+ authors = [ { name = "The OpenFE developers", email = "openfe@omsf.io" } ]
+-requires-python = ">=3.11,<3.14"
++requires-python = ">=3.11,<3.15"
+ classifiers = [
+   "Development Status :: 5 - Production/Stable",
+   "Intended Audience :: Science/Research",
+@@ -21,6 +21,7 @@ classifiers = [
+   "Programming Language :: Python :: 3.11",
+   "Programming Language :: Python :: 3.12",
+   "Programming Language :: Python :: 3.13",
++  "Programming Language :: Python :: 3.14",
+   "Topic :: Scientific/Engineering :: Bio-Informatics",
+   "Topic :: Scientific/Engineering :: Chemistry",
+ ]
