@@ -13,7 +13,7 @@ source:
   url: https://github.com/OpenFreeEnergy/${{ name }}/archive/refs/tags/v${{ version }}.tar.gz
   sha256: 2cd0aaa1d53027d199e10090c2c77af5f3cc1ab25b4069f94274670065cb568b
   patches:
-    - py314-fixes.patch  # Fixes python 3.14 support 
+    - py314-fixes.patch  # Fixes python 3.14 support and can be dropped in the next gufe release
 
 build:
   number: 1
