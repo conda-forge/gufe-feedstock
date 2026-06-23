@@ -4,7 +4,7 @@ context:
   python_min: "3.11"
   python_max: "3.14"
   name: gufe
-  version: 1.11.0
+  version: 1.12.0
 
 package:
   name: ${{ name|lower }}
@@ -12,7 +12,7 @@ package:
 
 source:
   url: https://github.com/OpenFreeEnergy/${{ name }}/archive/refs/tags/v${{ version }}.tar.gz
-  sha256: 2cd0aaa1d53027d199e10090c2c77af5f3cc1ab25b4069f94274670065cb568b
+  sha256: 9b2846625c50bffdf87bc6985e2571b242eb0ec67c8bef200653af1caafa30a9
 
 build:
   number: 0
