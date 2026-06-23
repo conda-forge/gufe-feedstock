@@ -22,7 +22,7 @@ requirements:
   host:
     - pip
     - python ${{ python_min }}.*
-    - setuptools >=61.0
+    - setuptools >=78.1.1  # security-related bugfix https://setuptools.pypa.io/en/stable/history.html#v78-1-1
     - setuptools_scm
   run:
     - python ${{ python_min }}.*
