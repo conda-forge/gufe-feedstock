@@ -1,0 +1,25 @@
+From 9d4aa7175f8dbc6fd6d99fedd39e39f017782c3e Mon Sep 17 00:00:00 2001
+From: Alyssa Travitz <31974495+atravitz@users.noreply.github.com>
+Date: Wed, 24 Jun 2026 14:43:34 -0700
+Subject: [PATCH] version-deprecated -> deprecated (#803)
+
+---
+ src/gufe/ligandnetwork.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/gufe/ligandnetwork.py b/src/gufe/ligandnetwork.py
+index 8068d69..539f300 100644
+--- a/src/gufe/ligandnetwork.py
++++ b/src/gufe/ligandnetwork.py
+@@ -318,7 +318,7 @@ class LigandNetwork(GufeTokenizable):
+     ) -> gufe.AlchemicalNetwork:
+         """Create an :class:`.AlchemicalNetwork` from this :class:`.LigandNetwork`.
+ 
+-        .. version-deprecated:: 1.8.0
++        .. deprecated:: 1.8.0
+             This function is deprecated and will be removed in version 1.13.0.
+ 
+         Parameters
+-- 
+2.50.1 (Apple Git-155)
+
