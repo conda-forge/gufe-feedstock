@@ -14,7 +14,7 @@ source:
   sha256: 9b2846625c50bffdf87bc6985e2571b242eb0ec67c8bef200653af1caafa30a9
 
 build:
-  number: 1
+  number: 2
   noarch: python
   script: SETUPTOOLS_SCM_PRETEND_VERSION=${{ version }} ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
@@ -25,7 +25,6 @@ requirements:
     - setuptools >=78.1.1  # security-related bugfix https://setuptools.pypa.io/en/stable/history.html#v78-1-1
     - setuptools_scm
   run:
-    - python >=${{ python_min }}
     - msgpack-python
     - networkx
     - numpy
